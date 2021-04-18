@@ -1,0 +1,2 @@
+"/lib/modules/$(uname -r)"
+"/usr/src/$(uname -r)"

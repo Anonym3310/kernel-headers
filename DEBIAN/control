@@ -1,0 +1,6 @@
+Package: kernel-headers
+Version: 2.0
+Maintainer: @Anonym3310
+Architecture: all
+Section: misc
+Description: ~~~~~~~~~~~~~~

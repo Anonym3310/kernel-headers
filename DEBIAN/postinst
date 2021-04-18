@@ -1,0 +1,31 @@
+#!/bin/bash
+#===[ Log Error ]===#
+set -e # fail on any error
+set -u # treat unset variables as errors
+# ======[ Trap Errors ]======#
+set -E # let shell functions inherit ERR trap
+
+# Trap non-normal exit signals:
+# 1/HUP, 2/INT, 3/QUIT, 15/TERM, ERR
+trap err_handler 1 2 3 15 ERR
+function err_handler {
+local exit_status=${1:-$?}
+logger -s -p "syslog.err" -t "ootync.deb" "supersh.deb script '$0' error code $exit_status (line $BASH_LINENO: '$BASH_COMMAND')"
+exit $exit_status
+}
+#===[ Code ]===#
+mkdir -p "/lib/modules/$(uname -r)"
+mkdir -p "/lib/modules/$(uname -r)/kernel/drivers/net/wireless/"
+mkdir -p /usr/src/
+
+mv /kernel-headers/modules.* "/lib/modules/$(uname -r)"
+mv /kernel-headers "/usr/src/$(uname -r)"
+cd "/lib/modules/$(uname -r)"
+ln -sfnv "/usr/src/$(uname -r)" build 
+cd
+
+echo ""
+echo "Installation completion."
+echo ""
+echo "Thanks for install. My Telegtam - @Anonym3310"
+echo ""
