@@ -25,7 +25,7 @@ ln -sfnv "/usr/src/$(uname -r)" build
 cd
 
 echo ""
-echo "Installation completion."
+echo "Installation completion. Good luck )"
 echo ""
-echo "Thanks for install. My Telegtam - @Anonym3310"
+echo "By Anonym3310"
 echo ""
