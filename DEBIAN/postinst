@@ -21,11 +21,11 @@ mkdir -p /usr/src/
 mv /kernel-headers/modules.* "/lib/modules/$(uname -r)"
 mv /kernel-headers "/usr/src/$(uname -r)"
 cd "/lib/modules/$(uname -r)"
-ln -sfnv "/usr/src/$(uname -r)" build 
+ln -sfnv "/usr/src/$(uname -r)" build
 cd
 
 echo ""
-echo "Installation completion. Good luck )"
+echo "Installation completed. Good luck )"
 echo ""
 echo "By Anonym3310"
 echo ""
