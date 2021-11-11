@@ -1,6 +1,6 @@
 Package: kernel-headers
 Version: 2.0
 Maintainer: @Anonym3310
-Architecture: all
+Architecture: aarch64
 Section: misc
 Description: ~~~~~~~~~~~~~~
